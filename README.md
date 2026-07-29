@@ -134,13 +134,19 @@ streamlit run app_streamlit.py
 
 ```
 RAG-cy/
+├── README.md                 # 项目说明文档
+├── LICENSE                   # MIT 开源协议
+├── .gitignore                # Git 忽略规则（数据/密钥/研报等）
 ├── app_streamlit.py          # Streamlit 主入口
 ├── main.py                   # CLI 入口（竞赛原版）
 ├── requirements.txt
 ├── .env.example              # 环境变量模板
-├── data/stock_data/          # 默认数据集目录
-│   ├── subset.csv.example
-│   └── databases/            # 本地生成，不提交 Git
+├── data/                     # 数据目录（.gitkeep 保留结构）
+│   ├── pdf_reports/          # PDF 占位目录
+│   └── stock_data/           # 默认数据集目录
+│       ├── subset.csv.example
+│       ├── pdf_reports/        # 本地 PDF（不提交）
+│       └── databases/          # chunked_reports / vector_dbs（不提交）
 └── src/
     ├── pipeline.py           # 离线流水线
     ├── retrieval.py          # 向量 / 混合检索
