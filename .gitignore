@@ -1,0 +1,137 @@
+# --- Secrets & local environment ---
+.env
+.env.*
+!.env.example
+/env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- IDE / tooling ---
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+.streamlit/secrets.toml
+
+# --- Test & coverage ---
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
+
+# --- data/ : ignore local data files, preserve folder structure ---
+# Ignore all files under data/
+data/**/*
+# Allow Git to traverse directories
+!data/**/
+# Placeholder files (empty folder structure)
+!data/**/.gitkeep
+# Example company index (only tracked CSV)
+!data/stock_data/subset.csv.example
+
+# --- Data file types (global; subset.csv.example exempted above) ---
+*.csv
+!data/stock_data/subset.csv.example
+*.xlsx
+*.pdf
+*.pkl
+*.faiss
+*.index
+
+# Generated answers / debug under stock_data
+data/stock_data/answers_*.json
+data/stock_data/answers_*_debug.json
+# Broker report folders, e.g. 【上海证券】*.md / 【*】*_merged/
+/【*/
+/*_merged/
+# MinerU UUID output directories at repository root
+/[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*/
+/中芯国际*/
+
+# --- Data files (also under other paths) ---
+*.csv
+*.xlsx
+
+# --- Static / runtime artifacts ---
+static/
+
+# --- Local misc ---
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Packaging ---
+pip-log.txt
+pip-delete-this-directory.txt
+share/python-wheels/
+wheels/
+MANIFEST
+*.manifest
+*.spec
+lib/
+lib64/
+parts/
+sdist/
+var/
+develop-eggs/
+downloads/
+eggs/
+.installed.cfg
+.pdm.toml
+.pdm-python
+.pdm-build/
+__pypackages__/
+celerybeat-schedule
+celerybeat.pid
+*.sage.py
+/site
+.pyre/
+.pytype/
+cython_debug/
+.spyderproject
+.spyproject
+.ropeproject
+docs/_build/
+.pybuilder/
+target/
+instance/
+.webassets-cache
+.scrapy
+profile_default/
+ipython_config.py
+.dmypy.json
+dmypy.json
+*.mo
+*.pot
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+*.cover
+*.py,cover
+nosetests.xml
+coverage.xml
